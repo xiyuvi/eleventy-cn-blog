@@ -31,6 +31,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 SEO优化
 开箱即用的友情链接页面
 使用View Transitions API创建的优雅过渡效果
+持续更新eleventy新版本
 
 ## 将项目转为零js博客的步骤
 ### 去除预加载功能（1kb）
