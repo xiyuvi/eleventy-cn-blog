@@ -27,7 +27,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
    
    
 ## 未来想要实现的功能
-
+基于Valine的评论功能
 SEO优化
 开箱即用的友情链接页面
 使用View Transitions API创建的优雅过渡效果
