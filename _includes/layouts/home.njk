@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+<!-- Delete this message, it will also remove the component CSS from the bundle -->
+{%- css %}{% include "public/css/message-box.css" %}{% endcss %}
+<div class="message-box">
+	<p>欢迎访问席宇博客</p>
+</div>
+<!-- Stop deleting -->
+
+{{ content | safe }}

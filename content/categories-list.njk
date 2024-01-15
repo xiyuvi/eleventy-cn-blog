@@ -1,0 +1,16 @@
+---
+permalink: /categories/
+layout: layouts/home.njk
+eleventyNavigation:
+  key: 分类
+  order: 3
+eleventyComputed:
+  title: 📂分类-席宇博客
+---
+
+<h1>📂分类</h1>
+<ul>
+{% for category in collections.categoriesList %}
+    <li><a href="/categories/{{ category}}/">{{ category }}</a></li>
+{% endfor %}
+</ul>

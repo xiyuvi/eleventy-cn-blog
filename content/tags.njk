@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+eleventyComputed:
+  title: 🏷️标签为“{{ tag }}”-席宇博客
+permalink: /tags/{{ tag | encode }}/
+---
+<h1>🏷️标签为 “{{ tag }}”</h1>
+
+{% set postslist = collections[ tag ] %}
+{% include "postslist.njk" %}
+
+<p>查看 <a href="/tags/">所有标签</a></p>

@@ -1,0 +1,12 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: 归档
+  order: 2
+eleventyComputed:
+  title: 🗄️归档-席宇博客
+---
+<h1>🗄️归档</h1>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}

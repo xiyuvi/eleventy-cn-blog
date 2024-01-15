@@ -1,0 +1,17 @@
+---
+permalink: /tags/
+layout: layouts/home.njk
+eleventyNavigation:
+  key: 标签
+  order: 4
+eleventyComputed:
+  title: 🏷️标签-席宇博客
+---
+<h1>🏷️标签</h1>
+
+<ul>
+{% for tag in collections.all | getAllTags | filterTagList %}
+	{% set tagUrl %}/tags/{{ tag | encode }}/{% endset %}
+	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a></li>
+{% endfor %}
+</ul>

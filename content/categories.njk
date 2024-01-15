@@ -1,0 +1,17 @@
+---
+layout: layouts/home.njk
+pagination:
+    data: collections.categories
+    size: 1
+    alias: category
+permalink: "/categories/{{ category }}/"
+eleventyComputed:
+  title: 📂分类为“{{ category }}”-席宇博客
+---
+
+<h1>📂分类为 “{{ category }}”</h1>
+
+{% set postslist = collections.categories[category] %}
+{% include "postslist.njk" %}
+
+<p>查看 <a href="/categories/">所有分类</a></p>

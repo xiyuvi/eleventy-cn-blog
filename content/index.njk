@@ -1,0 +1,30 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: 首页
+  order: 1
+numberOfLatestPostsToShow: 10
+eleventyComputed:
+  title: 首页-席宇博客
+---
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+<h1>🆕最新 {{ latestPostsCount }} 篇文章</h1>
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>还有 {{ morePosts }} 篇文章在 <a href="/blog/">归档</a> 中</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}

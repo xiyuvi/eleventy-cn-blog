@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+{# Only include the syntax highlighter CSS on blog posts #}
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+<h1>{{ title }}</h1>
+
+<ul class="post-metadata">
+	<li>时间:<time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></li>
+	<li>分类:
+	{%- for cat in categories | filterCategories %}
+	{%- set categoriesUrl %}/categories/{{ cat | encode }}/{% endset %}
+	<a href="{{ categoriesUrl }}" class="post-tag">{{ cat }}</a>{%- if not loop.last %} , {% endif %}
+	{%- endfor %}
+	</li>
+	<li>标签:
+	{%- for tag in tags | filterTagList %}
+	{%- set tagUrl %}/tags/{{ tag | encode }}/{% endset %}
+	<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %} , {% endif %}
+	{%- endfor %}
+	</li>
+</ul>
+
+{{ content | safe }}
+
+{%- if collections.posts %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+{%- set nextPost = collections.posts | getNextCollectionItem %}
+{%- if nextPost or previousPost %}
+<ul class="links-nextprev">
+	{%- if previousPost %}<li>上一篇: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+	{%- if nextPost %}<li>下一篇: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+</ul>
+{%- endif %}
+{%- endif %}
