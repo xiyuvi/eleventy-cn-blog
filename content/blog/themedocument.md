@@ -52,7 +52,6 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 ## 将项目转为零js博客的步骤
 ### 去除预加载功能（1kb）
 在_includes\layouts\base.njk内删除相关js
-![image](https://github.com/xiyuvi/eleventy-cn-blog/assets/38217058/afb4b64a-ed45-4919-860e-2ca5acc25073)
 
 ## 注意事项
 1.不要将文章的md文件命名为纯数字/中文/空格，例如1.md，这是因为View Transitions依赖的view-transition-name属性值为纯数字时将为无效值。纯数字的文档名会影响视角过渡效果。后续升级通过修改view-transition-name锚定值解决该问题
