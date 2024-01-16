@@ -5,7 +5,7 @@ eleventyNavigation:
   order: 1
 numberOfLatestPostsToShow: 10
 eleventyComputed:
-  title: 首页-席宇博客
+  title: 首页-{{ metadata.title }}
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}

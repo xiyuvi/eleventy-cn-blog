@@ -11,7 +11,7 @@ pagination:
   addAllPagesToCollections: true
 layout: layouts/home.njk
 eleventyComputed:
-  title: 🏷️标签为“{{ tag }}”-席宇博客
+  title: 🏷️标签为“{{ tag }}”-{{ metadata.title }}
 permalink: /tags/{{ tag | encode }}/
 ---
 <h1>🏷️标签为 “{{ tag }}”</h1>

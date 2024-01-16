@@ -3,7 +3,34 @@
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
+/* 视图转换 */
+@keyframes fade-in {
+  from { opacity: 0; }
+}
 
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes slide-from-right {
+  from { transform: translateX(60px); }
+}
+
+@keyframes slide-to-left {
+  to { transform: translateX(-60px); }
+}
+#skip {
+  view-transition-name: skip;
+}
+::view-transition-old(skip) {
+  animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
+}
+
+::view-transition-new(skip) {
+  animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+    300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
 /* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;

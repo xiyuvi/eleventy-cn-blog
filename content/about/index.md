@@ -4,7 +4,7 @@ eleventyNavigation:
   key: 关于
   order: 6
 eleventyComputed:
-  title: 关于-席宇博客
+  title: 关于-{{ metadata.title }}
 ---
 
 # 🏠 关于本站 #
