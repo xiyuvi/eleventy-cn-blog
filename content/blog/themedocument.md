@@ -21,11 +21,11 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 - json格式的文章数据,你甚至可以将静态博客作为api使用(作者本人已实现静态博客对接微信小程序)
   
 ## 已经增加的功能
-- [x] 支持中文url（url本来就支持中文，是11ty内置的url美化插件不支持中文导致的问题，这里直接不使用插件就解决了问题）
-- [x] 支持窗口内链接预加载（包含使用不足1kb的js代码）
-- [x] 增加分类
-- [x] html压缩
-- [x] View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,让我们一同期待View Transitions成为标准)
+- 支持中文url（url本来就支持中文，是11ty内置的url美化插件不支持中文导致的问题，这里直接不使用插件就解决了问题）
+- 支持窗口内链接预加载（包含使用不足1kb的js代码）
+- 增加分类
+- html压缩
+- View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,让我们一同期待View Transitions成为标准)
   
 ## 如何使用
 更详细的文档可以参考 [eleventy](https://www.11ty.dev/) [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
@@ -40,13 +40,13 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
    
 ## 未来想要实现的功能
 
-- [ ]  基于Valine的评论功能
-- [ ]  SEO优化
-- [ ]  友情链接页面
-- [ ]  首页改为分页形式
-- [ ]  纯前端搜索功能
-- [ ]  友情链接页面
-- [ ]  持续更新eleventy新版本
+- 基于Valine的评论功能
+- SEO优化
+- 友情链接页面
+- 首页改为分页形式
+- 纯前端搜索功能
+- 友情链接页面
+- 持续更新eleventy新版本
 
 
 ## 将项目转为零js博客的步骤
