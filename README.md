@@ -4,7 +4,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 ## 示例站点
 [demo.xiyu.pro](https://demo.xiyu.pro/)
 
-## 主要功能
+## 主要特色
 
 - 开箱即用的 Lighthouse 得分为四百分！
 - 支持RSS订阅和sitemap生成
@@ -12,7 +12,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 - 通过短代码优化图像{% image %}
 - json格式的文章数据,你甚至可以将静态博客作为api使用(作者本人已实现静态博客对接微信小程序)
   
-## 基于eleventy-base-blog增加的功能
+## 已经增加的功能
 - 中文url
 - 支持窗口内链接预加载（包含使用不足1kb的js代码）
 - 增加分类
@@ -31,10 +31,14 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
    
    
 ## 未来想要实现的功能
-基于Valine的评论功能
-SEO优化
-友情链接页面
-持续更新eleventy新版本
+-基于Valine的评论功能
+-SEO优化
+-友情链接页面
+-首页改为分页形式
+-纯前端搜索功能
+-友情链接页面
+-持续更新eleventy新版本
+
 
 ## 将项目转为零js博客的步骤
 ### 去除预加载功能（1kb）
