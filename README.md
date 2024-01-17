@@ -1,24 +1,24 @@
 # eleventy-cn-blog
 
-eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy](https://www.11ty.dev/)的静态博客生成器，灵感来自[eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)模版，对中文做了一些优化，比如支持中文URL和中文日期格式。该项目尽量使用零js编写，但是由于现实世界和理想之间的巨大落差，有时候不得不尽量克制的添加必要js，如果不需要某些依赖js的功能，也提供删除相关js的方法。如果你喜欢可以点个star，有使用问题可以提交issues
+eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy](https://www.11ty.dev/)的静态博客生成器，灵感来自[eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)模版，对中文做了一些优化，比如支持中文URL和中文日期格式。
+支持环保事业,减少用户设备能耗,该项目尽量克制使用js编写，但是由于现实世界和理想之间的巨大落差，有时候不得不添加必要js，如果不需要某些依赖js的功能，可以手动删除相关js不影响整体使用。如果喜欢可以点个star，有使用问题可以提交issues
 ## 示例站点
 [demo.xiyu.pro](https://demo.xiyu.pro/)
 
-## 主要特色
+## 主要特色功能
 
-- 开箱即用的 Lighthouse 得分为四百分！
-- 支持RSS订阅和sitemap生成
-- 零js的代码高亮
-- 通过短代码优化图像{% image %}
-- json格式的文章数据,你甚至可以将静态博客作为api使用(作者本人已实现静态博客对接微信小程序)
-  
-## 已经增加的功能
+- [x] 开箱即用的 Lighthouse 得分为四百分！
+- [x] 支持RSS订阅和sitemap生成
+- [x] 代码高亮
+- [x] 通过短代码优化图像{% image %}
+- [x] json格式的文章数据,你甚至可以将静态博客作为api使用(作者本人已实现静态博客对接微信小程序)
 - [x] 支持中文url（url本来就支持中文，是11ty内置的url美化插件不支持中文导致的问题，这里直接不使用插件就解决了问题）
-- [x] 支持窗口内链接预加载（包含使用不足1kb的js代码）
+- [x] 支持窗口内链接预加载（包含4kb的js）
 - [x] 增加分类
 - [x] html压缩
-- [x] View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,让我们一同期待View Transitions成为标准)
-- [x] 支持Service Worker,博客可以在无网环境使用
+- [x] View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,一同期待View Transitions成为标准)
+- [x] 支持Service Worker,博客可以在无网环境使用（包含少量js）
+
   
 ## 如何使用
 更详细的文档可以参考 [eleventy](https://www.11ty.dev/) [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
