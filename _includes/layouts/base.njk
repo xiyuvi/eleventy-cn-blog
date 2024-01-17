@@ -51,7 +51,6 @@
 				</ul>
 			</nav>
 		</header>
-
 		<main id="skip">
 			{{ content | safe }}
 		</main>
@@ -60,11 +59,38 @@
 
 		<!-- Current page: {{ page.url | htmlBaseUrl }} -->
 		<!-- 预加载 -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script>
-		<script>
-			window.addEventListener('load', () => {
-  				quicklink.listen();
-			});
-		</script>
+		{# <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js"></script> #}
+		<script src="/js/quicklink.umd.js"></script>
+        <script>
+            window.addEventListener('load', () => {
+                quicklink.listen();
+                if (typeof navigator.onLine !== 'undefined' && !navigator.onLine) {
+                    let dom = document.querySelector('.message-box p')
+                    if (dom) {
+                        dom.textContent = "当前处于离线状态。您仍然可以使用此网站，但内容可能不是最新的。";
+                    }
+                }
+            });
+            if ("serviceWorker" in navigator) {
+                navigator
+                    .serviceWorker
+                    .register("/service-worker.js")
+                    .then((registration) => {
+                        registration.addEventListener("updatefound", () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener("statechange", () => {
+                                if (newWorker.state === "installed") {
+                                    if (navigator.serviceWorker.controller) { // New service worker installed and registered, we reload the page
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.error("Service Worker registration failed:", error);
+                    });
+            }
+        </script>
 	</body>
 </html>

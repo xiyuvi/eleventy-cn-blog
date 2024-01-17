@@ -16,3 +16,6 @@
 		--color-message-box: #082840;
 	}
 }
+.message-cache-box{
+	display: none;
+}

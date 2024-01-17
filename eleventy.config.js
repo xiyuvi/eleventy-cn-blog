@@ -1,6 +1,7 @@
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 const htmlmin = require("html-minifier");
+const pluginPWA = require("eleventy-plugin-pwa-v2");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -115,7 +116,7 @@ module.exports = function (eleventyConfig) {
 	});
 	//分类详细数据
 	eleventyConfig.addCollection("categories", function (collectionApi) {
-		let data=collectionApi.getAll().reduce(function (acc, item) {
+		let data = collectionApi.getAll().reduce(function (acc, item) {
 			if (item.data.categories) {
 				if (typeof item.data.categories === "string") {
 					item.data.categories = [item.data.categories];
@@ -139,22 +140,48 @@ module.exports = function (eleventyConfig) {
 		return tags
 	});
 	//压缩html-去除空白
-	eleventyConfig.addTransform("htmlmin", function(content) {
+	eleventyConfig.addTransform("htmlmin", function (content) {
 		// Prior to Eleventy 2.0: use this.outputPath instead
-		if( this.page.outputPath && this.page.outputPath.endsWith(".html") ) {
-		  let minified = htmlmin.minify(content, {
-			useShortDoctype: true,
-			removeComments: true,
-			collapseWhitespace: true,
-			minifyCSS: true,
-			minifyJS: true
-		  });
-		  return minified;
+		if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true
+			});
+			return minified;
 		}
-	
-		return content;
-	  });
 
+		return content;
+	});
+	//PWA
+	eleventyConfig.addPassthroughCopy('public/js');
+	eleventyConfig.addPlugin(pluginPWA, {
+		cacheId: "xiyupro", // change this to your application id
+		globIgnores: [
+			// any files you don't want service worker to cache go here
+			//   "share-*.jpg",
+		],
+		runtimeCaching: [
+			{
+				// we always want fresh copy of the index page
+				urlPattern: /\/$/,
+				handler: "NetworkFirst",
+			},
+			{
+				// we also want fresh copies of any HTML page
+				urlPattern: /\.html$/,
+				handler: "NetworkFirst",
+			},
+			{
+				// we serve stale copies of static assets while they're refreshed
+				urlPattern:
+					/^.*\.(jpg|png|mp4|gif|webp|ico|svg|woff2|woff|eot|ttf|otf|ttc|json)$/,
+				handler: "StaleWhileRevalidate",
+			},
+		],
+	});
 	// Features to make your build faster (when you need them)
 
 	// If your passthrough copy gets heavy and cumbersome, add this line

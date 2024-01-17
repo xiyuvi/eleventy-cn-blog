@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/home.njk
 eleventyNavigation:
   key: 关于
   order: 6
