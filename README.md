@@ -38,6 +38,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 - [ ]  首页改为分页形式
 - [ ]  纯前端搜索功能
 - [ ]  友情链接页面
+- [ ]  网页无网环境使用,配置Service Worker
 - [ ]  持续更新eleventy新版本
 
 
