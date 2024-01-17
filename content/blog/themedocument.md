@@ -26,6 +26,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 - 增加分类
 - html压缩
 - View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,让我们一同期待View Transitions成为标准)
+- 支持Service Worker,博客可以在无网环境使用
   
 ## 如何使用
 更详细的文档可以参考 [eleventy](https://www.11ty.dev/) [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog)
