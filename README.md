@@ -10,6 +10,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 ## 主要特色功能
 
 - [x] 开箱即用的 Lighthouse 得分为四百分！
+      
       ![image](https://github.com/xiyuvi/eleventy-cn-blog/assets/38217058/b2e6cd4c-1d64-4de9-ba97-6facd2da04cb)
 
 - [x] 支持RSS订阅和sitemap生成
@@ -22,6 +23,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 - [x] html压缩
 - [x] View Transitions页面转换的优雅过渡效果(这个api目前是草案阶段,如需使用需更新谷歌浏览器最新版并开启chrome://flags#view-transition-on-navigation,一同期待View Transitions成为标准)
 - [x] 支持Service Worker,博客可以在无网环境使用（包含少量js）
+      
       ![image](https://github.com/xiyuvi/eleventy-cn-blog/assets/38217058/76c75ad5-4ed4-4d7e-a74c-77193da73aee)
 
 
