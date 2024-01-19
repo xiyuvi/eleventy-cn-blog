@@ -67,6 +67,7 @@
                 if (typeof navigator.onLine !== 'undefined' && !navigator.onLine) {
                     let dom = document.querySelector('.message-box p')
                     if (dom) {
+						document.querySelector('.message-box').classList.add("err")
                         dom.textContent = "当前处于离线状态。您仍然可以使用此网站，但内容可能不是最新的。";
                     }
                 }
