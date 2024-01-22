@@ -4,6 +4,7 @@ layout: layouts/home.njk
 {# Only include the syntax highlighter CSS on blog posts #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
+<main data-pagefind-body>
 <h1 style="view-transition-name:{{ page.fileSlug }};width: fit-content;">{{ title }}</h1>
 
 <ul class="post-metadata">
@@ -34,3 +35,4 @@ layout: layouts/home.njk
 </ul>
 {%- endif %}
 {%- endif %}
+</main>

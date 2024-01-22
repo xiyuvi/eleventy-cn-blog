@@ -1,0 +1,20 @@
+<!-- pagination.njk -->
+<div class="postlist-date">
+  当前第{{ pagination.pageNumber + 1 }}页,共{{ pagination.pages.length }}页
+</div>
+
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous | url }}">上一页</a>
+    {% endif %}
+    {% for pageEntry in pagination.pages %}
+      {% if page.url ==  pagination.hrefs[loop.index0] %}
+        <a href="{{ pagination.hrefs[loop.index0] }}" aria-current="page">
+          {{ loop.index }}</a>&nbsp;
+      {% else %}
+        <a href="{{ pagination.hrefs[loop.index0] }}">
+          {{ loop.index }}</a>&nbsp;
+      {% endif %}
+    {% endfor %}
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next | url }}">下一页</a>
+    {% endif %}

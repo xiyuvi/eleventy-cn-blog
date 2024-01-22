@@ -4,7 +4,7 @@ eleventyNavigation:
   key: 关于
   order: 7
 eleventyComputed:
-  title: 关于-{{ metadata.title }}
+  title: 👨‍💻关于-{{ metadata.title }}
 ---
 
 ## 🏠 关于本站 ##
@@ -13,3 +13,5 @@ eleventyComputed:
 一个开心的小胖子
 ## ⛹ 兴趣爱好 ##
 LOL大乱斗 warframe
+## 💬 联系方式 ##
+邮箱：xiyupro@qq.com

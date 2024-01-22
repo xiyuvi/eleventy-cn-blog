@@ -1,0 +1,19 @@
+---
+permalink: /search/
+layout: layouts/home.njk
+eleventyNavigation:
+  key: 搜索
+  order: 8
+eleventyComputed:
+  title: 🏷️搜索-{{ metadata.title }}
+---
+<h1>🏷️搜索</h1>
+
+<link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/pagefind/pagefind-ui.js"></script>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+</script>
