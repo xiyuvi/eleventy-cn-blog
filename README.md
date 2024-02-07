@@ -4,7 +4,7 @@ eleventy-cn-blog是一个开箱即用的静态博客生成器，基于[eleventy]
 
 支持环保事业,减少用户设备能耗,该项目尽量克制使用js编写，但是由于现实世界和理想之间的巨大落差，有时候不得不添加必要js，如果不需要某些依赖js的功能，可以手动删除相关js不影响整体使用。如果喜欢可以点个star，有使用问题可以提交issues
 ## 示例站点
-[demo.xiyu.pro](https://demo.xiyu.pro/)
+[xiyu.pro](https://xiyu.pro/)
 ![image](https://github.com/xiyuvi/eleventy-cn-blog/assets/38217058/6f5bf2aa-f644-4415-a3ea-aacd47f293c6)
 
 
