@@ -43,3 +43,9 @@ pre[class*="language-diff-"] {
 	text-decoration: none; /* override del, ins, mark defaults */
 	color: inherit; /* override del, ins, mark defaults */
 }
+main picture>img{
+	max-width: 100%;
+	height: auto;
+	display:block;
+	margin: 2px auto;
+}

@@ -5,7 +5,7 @@ layout: layouts/home.njk
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 <main data-pagefind-body>
-<h1 style="view-transition-name:{{ page.fileSlug }};width: fit-content;">{{ title }}</h1>
+<h1 style="view-transition-name:blog{{ page.fileSlug }};width: fit-content;">{{ title }}</h1>
 
 <ul class="post-metadata">
 	<li>时间:<time datetime="{{ page.date | htmlDateString }}">{{ page.date | htmlDateString }}</time></li>

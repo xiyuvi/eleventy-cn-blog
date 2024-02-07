@@ -5,8 +5,8 @@
   "scripts": {
     "build": "npx @11ty/eleventy && npx -y pagefind --site _site",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
-    "dev": "npx @11ty/eleventy && npx -y pagefind --site _site&npx @11ty/eleventy --serve --quiet",
-    "start": "npx @11ty/eleventy --serve --quiet",
+    "dev": "npx @11ty/eleventy --serve --quiet",
+    "start": "npx @11ty/eleventy && npx -y pagefind --site _site&npx @11ty/eleventy --serve --quiet",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
     "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"

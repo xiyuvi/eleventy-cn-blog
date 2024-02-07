@@ -1,0 +1,4 @@
+Sitemap: https://xiyu.pro/sitemap.xml
+User-agent: *
+Disallow: 
+Allow: /
